@@ -12,7 +12,7 @@
 
 One-click updates · automatic backups · instant rollback · error logs explained in plain language
 
-[![version](https://img.shields.io/badge/version-0.1.5-1f6feb?style=flat-square)](#download--install)
+[![version](https://img.shields.io/badge/version-0.1.10-1f6feb?style=flat-square)](#download--install)
 [![platform](https://img.shields.io/badge/platform-Windows%2010%20%2F%2011-2ea043?style=flat-square)](#requirements)
 [![license](https://img.shields.io/badge/license-Closed%20Source%20%C2%B7%20All%20Rights%20Reserved-8b949e?style=flat-square)](#license--disclaimer)
 
@@ -22,8 +22,8 @@ One-click updates · automatic backups · instant rollback · error logs explain
 
 ---
 
-> **This repository (`SlowlifePlughub`) is the sole official distribution channel for SlowLife Addon Manager.**
-> "SlowlifePlughub" is the project codename; the application itself is called **SlowLife Addon Manager**.
+> **This repository (`25wowbox`) is the sole official distribution channel for SlowLife Addon Manager.**
+> "25wowbox" is the project codename; the application itself is called **SlowLife Addon Manager**.
 > **English release files are named `SlowLifePlughub-*`** to match this repository, so you can tell at a
 > glance that what you downloaded is an official build.
 >
@@ -97,8 +97,8 @@ exactly the same program.)
 
 | Package | Best for | Notes |
 | --- | --- | --- |
-| `SlowLifePlughub-0.1.5.exe` — **single file** | Most users | One `.exe`; smallest and easiest to copy around |
-| `SlowLifePlughub-0.1.5-portable.zip` — **portable folder** | Anyone worried about antivirus false positives | Unzip and run; starts faster and has **noticeably fewer AV false positives**. It is a `.zip`, so Windows opens it natively — no WinRAR needed |
+| `2.5wowbox-0.1.10.exe` — **single file** | Most users | One `.exe`; smallest and easiest to copy around |
+| `2.5wowbox-0.1.10-portable.zip` — **portable folder** | Anyone worried about antivirus false positives | Unzip and run; starts faster and has **noticeably fewer AV false positives**. It is a `.zip`, so Windows opens it natively — no WinRAR needed |
 
 **First run, in three steps:**
 

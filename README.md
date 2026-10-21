@@ -6,13 +6,13 @@
 
 <div align="center">
 
-# SlowLife 魔兽插件管理器
+# 2.5wowbox 魔兽插件管理器
 
 **面向各种 WoW 私服的通用插件管理器 —— 不限版本、不限服务器**
 
 一键检查更新 · 自动留存旧版本 · 随时回滚 · 报错日志翻译成人话
 
-[![version](https://img.shields.io/badge/version-0.1.5-1f6feb?style=flat-square)](#下载与安装)
+[![version](https://img.shields.io/badge/version-0.1.10-1f6feb?style=flat-square)](#下载与安装)
 [![platform](https://img.shields.io/badge/platform-Windows%2010%20%2F%2011-2ea043?style=flat-square)](#系统要求)
 [![license](https://img.shields.io/badge/license-闭源%20%C2%B7%20All%20Rights%20Reserved-8b949e?style=flat-square)](#声明与免责)
 
@@ -22,8 +22,8 @@
 
 ---
 
-> **本仓库 `SlowlifePlughub` 是《SlowLife 魔兽插件管理器》的唯一官方发布渠道。**
-> 仓库名是项目代号，程序名是「SlowLife 魔兽插件管理器」；**英文发布包的文件名统一用
+> **本仓库 `25wowbox` 是《2.5wowbox 魔兽插件管理器》的唯一官方发布渠道。**
+> 仓库名是项目代号，程序名是「2.5wowbox 魔兽插件管理器」；**英文发布包的文件名统一用
 > `SlowLifePlughub-*`**，和仓库名一致 —— 方便你确认下到的是不是官方版本。
 >
 > 本仓库是闭源软件的发布页，不包含源代码。这里放：使用说明、更新内容、以及每个版本的安装包（Releases）。
@@ -40,7 +40,7 @@
 - 手动替换文件，换错了插件直接报错，还找不回上一天能用的版本；
 - 游戏一登录就弹一堆 `Interface\AddOns\xxx\yyy.lua:123: attempt to ...` 红字，看不懂。
 
-**SlowLife 魔兽插件管理器**把这三件事收进一个窗口：扫描你本地的 `Interface/AddOns`，
+**2.5wowbox 魔兽插件管理器**把这三件事收进一个窗口：扫描你本地的 `Interface/AddOns`，
 对接你自己的插件源（坚果云 WebDAV / 网盘 / 分享链接 / JSON 清单 / GitHub / 本地目录），
 比对版本后一键更新，每次更新前自动备份，出问题随时回滚。
 
@@ -92,8 +92,8 @@
 | --- | --- | --- |
 | `…单EXEv1.5.rar` | 大多数用户 | 只有一个 exe，最省事；体积小、拷贝方便 |
 | `…解压版1.5.rar` | 怕杀软误报 / 想改配置的 | 一个文件夹，启动更快，**杀软误报率明显更低** |
-| `SlowLifePlughub-0.1.5.exe` | 给不看中文的用户 | 英文命名的单文件版，和上面那个是**同一份程序** |
-| `SlowLifePlughub-0.1.5-portable.zip` | 同上 | 英文命名的文件夹版（zip，Windows 双击即开） |
+| `2.5wowbox-0.1.10.exe` | 给不看中文的用户 | 英文命名的单文件版，和上面那个是**同一份程序** |
+| `2.5wowbox-0.1.10-portable.zip` | 同上 | 英文命名的文件夹版（zip，Windows 双击即开） |
 
 **首次使用三步：**
 
@@ -206,7 +206,7 @@ PyInstaller 打包的 Windows 程序普遍会被误报（因为它的启动方�
 这个工具是作者用业余时间一点点写出来的。觉得有用的话，**在心里点个赞就够了**——
 程序主体只做联网更新，其余全部离线运行，你给好评作者也收不到。
 
-确实想支持的，可以发邮件到 **kyomunehiro@gmail.com**（赞助方式在邮件里答复）。
+确实想支持的，可以发邮件到 **kyomunehiro@gmail.com**（打赏方式在邮件里答复）。
 
 ---
 

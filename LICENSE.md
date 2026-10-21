@@ -1,4 +1,4 @@
-# SlowLife 魔兽插件管理器 · 使用许可
+# 2.5wowbox 魔兽插件管理器 · 使用许可
 
 **Copyright © 2026 Delete (darknightnya4). All Rights Reserved.**
 
