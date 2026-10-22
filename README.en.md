@@ -12,7 +12,7 @@
 
 One-click updates · automatic backups · instant rollback · error logs explained in plain language
 
-![version](https://img.shields.io/badge/version-0.1.10-1f6feb?style=flat-square)
+![version](https://img.shields.io/badge/version-0.2.0-1f6feb?style=flat-square)
 
 ![platform](https://img.shields.io/badge/platform-Windows%2010%20%2F%2011-2ea043?style=flat-square)
 
@@ -24,14 +24,20 @@ One-click updates · automatic backups · instant rollback · error logs explain
 
 ---
 
-> **This repository (`2.5WoWBox`) is the sole official distribution channel for 2.5wowbox.**>   
-> The application is called **2.5wowbox Addon Manager**, and **English release files are named>   
-> `2.5wowbox-*`** (e.g. `2.5wowbox-0.1.10.exe`) to match, so you can tell at a glance that what you>   
-> downloaded is an official build.>   
-> It used to be called `SlowLife PlugHub`; renamed to 2.5wowbox in Oct 2026 — **do not download the>   
-> old file names.**
+> **This repository (`2.5WoWBox`) is the sole official distribution channel for 2.5wowbox.**
 >
-> This is the distribution page for a closed-source application. No source code is included.>   
+> The application is called **2.5wowbox Addon Manager**, and \*\*English release files are named
+>
+> `2.5wowbox-*`\** (e.g. `2.5wowbox-0.2.0.exe`) to match, so you can tell at a glance that what you
+>
+> downloaded is an official build.
+>
+> It used to be called `SlowLife PlugHub`; renamed to 2.5wowbox in Oct 2026 — \*\*do not download the
+>
+> old file names.\**
+>
+> This is the distribution page for a closed-source application. No source code is included.
+>
 > What you'll find here: documentation, release notes, and the installer packages of each version (Releases).
 
 ![Main window](docs/screenshots/readme/en/home.png)
@@ -46,11 +52,65 @@ Anyone playing on a private server runs into the same three problems:
 - Replacing files by hand is error-prone — one wrong folder and the game throws errors, and last week's working setup is gone;
 - On login you get a wall of red `Interface\AddOns\xxx\yyy.lua:123: attempt to ...` messages you can't read.
 
-**2.5wowbox Addon Manager** puts all three in one window: it scans your local `Interface/AddOns`,  
-connects to **your own** addon sources (WebDAV / cloud links / share links / JSON catalogs / GitHub / local folders),  
+**2.5wowbox Addon Manager** puts all three in one window: it scans your local `Interface/AddOns`,
+
+connects to **your own** addon sources (WebDAV / cloud links / share links / JSON catalogs / GitHub / local folders),
+
 compares versions, updates in one click, backs up before every overwrite, and rolls back whenever something breaks.
 
 **It is a manager, not a repack ("integration pack").** Which addons you install, and whose build you use, is entirely up to you.
+
+### 0.2.0: Interface refresh and new themes
+
+1. Refined main navigation and client cards for clearer access to common actions.
+2. Added a separate Interface settings window for appearance, language and common actions, with continuous scrolling and search navigation.
+3. Added Frost · Soft, Frost · Silver and Frost · Glass, while keeping existing themes available.
+
+The following section explains the interface in version 0.2.0.
+
+Five switchable workspaces now sit on the left. **AddOn Manager** contains the original Home, AddOns,  
+Catalog, Backups, Errors and Settings pages. Switching away and back preserves the selected client,  
+list and filters. The other four slots stay blank, without icons, labels or tooltips, until a feature is registered.  
+Existing page layouts and secondary tabs are preserved. Narrow windows use a compact icon rail  
+with name tooltips and keyboard navigation.
+
+The sidebar’s **Interface settings** button opens a separate window with appearance, language,  
+File, Help and About on one continuous page. Use the expanded category index or search to locate  
+an item. The former top menus are hidden; shortcuts such as F5 and Ctrl+R remain available.  
+Light, Dark, Midnight Blue, three Frost variants, and Follow system are supported. Theme changes apply and save immediately;  
+language changes take effect after saving and restarting. Custom language packs remain supported.
+
+First launch without a saved theme preference defaults to Frost · Glass. Existing theme choices are preserved.
+
+All three Frost designs remain selectable: Frost · Soft keeps the first near-white/cyan design;  
+Frost · Silver preserves the second silver-gray design; Frost · Glass adds native translucent surfaces,  
+and teal actions. All three Frost variants now preview a shared flowing Kun outline with an ice-blue  
+to pale-gold gradient, a soft glow and a transparent background.  
+All three Frost variants share the new flowing Kun mark. The native capture below illustrates the glass material.  
+On Windows 11 22H2+ with Qt 6.9+, Desktop Acrylic  
+blurs the desktop and windows behind the app while text and controls remain crisp.  
+Windows may use an opaque appearance when inactive, transparency is disabled, or power saving applies.  
+Unsupported platforms use opaque surfaces. Theme choices wrap to fit the window.  
+Theme cards wrap to fit the window.
+
+![Native Frost settings window with all three variants](docs/screenshots/frost-native-2026-10-22/native-final-settings.jpg)
+
+The native capture uses a controlled background. Separate bilingual offscreen layout checks are in  
+docs/screenshots/frost-theme-options-2026-10-22/; those images do not demonstrate compositor blur.
+
+The plugin workspace keeps its original Settings tabs: General, Addon sources, Updates, Network,  
+License and About. Only theme and language controls moved. The version is 0.2.0.
+
+![Independent Interface settings window](docs/screenshots/interface-settings-2026-10-22/en/interface-midnight.png)
+
+Client cards and the Add Client card share the same compact size. Hover or keyboard focus reveals  
+paths, notes and secondary actions. A pencil beside the name opens Rename, with a tooltip;  
+Launch game and AddOns remain visible at all times.
+
+Some images were captured during earlier development stages; version numbers inside them reflect the capture date.  
+The download files below are for **0.2.0**.
+
+![Midnight Blue theme with the workspace sidebar](docs/screenshots/sidebar-0.1.12/en/midnight-home.png)
 
 ---
 
@@ -73,15 +133,36 @@ compares versions, updates in one click, backs up before every overwrite, and ro
 
 ## Screenshots
 
-<table>  
-<tr>  
-<td width="50%"><img src="docs/screenshots/readme/en/addons.png" alt="Addon management"></td>  
-<td width="50%"><img src="docs/screenshots/readme/en/settings.png" alt="Settings"></td>  
-</tr>  
-<tr>  
-<td align="center">Addon list: version, source and status at a glance</td>  
-<td align="center">Settings: client folder, scan rules, updates and network</td>  
-</tr>  
+### Historical addon page prototype (not integrated)
+
+The list combines an initials tile, name and description. One version column shows installed and  
+available versions, with individual update actions on each row and metadata in the detail panel.  
+Initials are used when artwork is unavailable; missing descriptions use an explicit placeholder.  
+Narrow windows hide source and client columns while retaining their information in the details.  
+More includes local scanning, backups and optional detailed columns for dates, remote version, size and errors.
+
+![Addon page prototype with local demo data](docs/screenshots/addon-overview-2026-10-22/en/midnight.png)
+
+The screenshot uses isolated local demo data. Its content and counts illustrate the layout; this is not an official release. Earlier page examples remain below.
+
+<table>
+
+<tr>
+
+<td width="50%"><img src="docs/screenshots/readme/en/addons.png" alt="Addon management"></td>
+
+<td width="50%"><img src="docs/screenshots/readme/en/settings.png" alt="Settings"></td>
+
+</tr>
+
+<tr>
+
+<td align="center">Addon list: version, source and status at a glance</td>
+
+<td align="center">Settings: client folder, scan rules, updates and network</td>
+
+</tr>
+
 </table>
 
 ![Update notice](docs/screenshots/readme/en/notes.png)
@@ -92,17 +173,21 @@ compares versions, updates in one click, backs up before every overwrite, and ro
 
 ## Download & install
 
-Grab the archive you need from [**Releases**](../../releases/latest). Unzip and run —  
+Grab the archive you need from [**Releases**](../../releases/latest). Unzip and run —
+
 **no installer, no registry entries.**
 
-**Use the `2.5wowbox-*` files below** — those are the English-named builds.  
-(There are also Chinese-named `.rar` packages in the same release, for Chinese users; they contain  
+**Use the `2.5wowbox-*` files below** — those are the English-named builds.
+
+(There are also Chinese-named `.rar` packages in the same release, for Chinese users; they contain
+
 exactly the same program.)
 
-| Package                                               | Best for                                       | Notes                                                                                                                                         |
-| ----------------------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `2.5wowbox-0.1.10.exe` — **single file**              | Most users                                     | One `.exe`; smallest and easiest to copy around                                                                                               |
-| `2.5wowbox-0.1.10-portable.zip` — **portable folder** | Anyone worried about antivirus false positives | Unzip and run; starts faster and has **noticeably fewer AV false positives**. It is a `.zip`, so Windows opens it natively — no WinRAR needed |
+| Package                                              | Best for                                       | Notes                                                                                                                                         |
+| ---------------------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `2.5wowbox-0.2.0.exe` — **single file**              | Most users                                     | One `.exe`; smallest and easiest to copy around                                                                                               |
+| `2.5wowbox-0.2.0-portable.zip` — **portable folder** | Anyone worried about antivirus false positives | Unzip and run; starts faster and has **noticeably fewer AV false positives**. It is a `.zip`, so Windows opens it natively — no WinRAR needed |
+
 
 **First run, in three steps:**
 
@@ -120,22 +205,27 @@ exactly the same program.)
 
 This deserves a clear explanation, because it's the easiest thing to misunderstand:
 
-- **There is no functional difference between activated and non-activated usage.**    
+- **There is no functional difference between activated and non-activated usage.**
+
   Update checking, backup/rollback and error analysis all work fully without activation.
 - Activation only unlocks **two or three experimental settings the developer uses** — normal players won't notice a difference.
-- The software contains **no paid content whatsoever**. The licence key exists for exactly one reason:    
+- The software contains **no paid content whatsoever**. The licence key exists for exactly one reason:
+
   **to stop people from repackaging it and selling it.**
-- Licensing is **offline**: it's a local text file (`.glic`) that you can open, inspect and delete.    
+- Licensing is **offline**: it's a local text file (`.glic`) that you can open, inspect and delete.
+
   Delete it and you're back to the non-activated state.
 
-> **Beware of scams:** anyone who contacts you offering to "activate it for you", "guarantee it works">   
+> **Beware of scams:** anyone who contacts you offering to "activate it for you", "guarantee it works"
+>
 > or sell you an "internal channel" is a scammer. Please don't send money.
 
 ---
 
 ## Security
 
-People reasonably ask: "a program that wants a licence key — what is it doing behind my back?"  
+People reasonably ask: "a program that wants a licence key — what is it doing behind my back?"
+
 So here are the facts.
 
 **The only thing it actually does:**
@@ -172,8 +262,10 @@ You can re-read this any time under **Security → Security statement** in the a
 
 <summary><b>My antivirus flags it — what now?</b></summary>
 
-Windows programs packaged with PyInstaller are commonly false-positived, because the way they bootstrap  
-resembles some malware. Add the program folder to your antivirus / Defender allow-list.  
+Windows programs packaged with PyInstaller are commonly false-positived, because the way they bootstrap
+
+resembles some malware. Add the program folder to your antivirus / Defender allow-list.
+
 **The unpacked-folder build has a much lower false-positive rate** than the single-EXE build — pick it if that worries you.
 
 </details>
@@ -190,7 +282,8 @@ Copy the whole folder, including `SlowLifeData/`. Everything is local files; not
 
 <summary><b>How do I uninstall it completely?</b></summary>
 
-Just delete the program folder. It writes no registry entries, installs no services and leaves no background process —  
+Just delete the program folder. It writes no registry entries, installs no services and leaves no background process —
+
 deleting the folder is a clean uninstall. If your antivirus is holding a file, reboot and delete again.
 
 </details>
@@ -199,7 +292,8 @@ deleting the folder is a clean uninstall. If your antivirus is holding a file, r
 
 <summary><b>An addon update broke the game — how do I go back?</b></summary>
 
-Open the **Backups** page, find the snapshot taken before that update, and hit rollback.  
+Open the **Backups** page, find the snapshot taken before that update, and hit rollback.
+
 A backup is created automatically before every overwrite.
 
 </details>
@@ -208,8 +302,10 @@ A backup is created automatically before every overwrite.
 
 <summary><b>Can it manage "integration packs" (整合包)?</b></summary>
 
-It can recognise addons inside them, but it deliberately does **not** offer "install a whole pack in one click":  
-packs usually contain a lot you don't need and tend to conflict with each other.  
+It can recognise addons inside them, but it deliberately does **not** offer "install a whole pack in one click":
+
+packs usually contain a lot you don't need and tend to conflict with each other.
+
 Managing *your own* selection is what this tool is for.
 
 </details>
@@ -226,8 +322,10 @@ Only Windows builds are published at the moment.
 
 ## Supporting the author
 
-This tool was written bit by bit in the author's spare time. If it's useful to you,  
-**a silent thumbs-up is more than enough** — the program only goes online to check for updates,  
+This tool was written bit by bit in the author's spare time. If it's useful to you,
+
+**a silent thumbs-up is more than enough** — the program only goes online to check for updates,
+
 so the author won't see your praise anyway.
 
 If you really want to give something back, email **<kyomunehiro@gmail.com>** (sponsorship details are answered there).
@@ -236,17 +334,16 @@ If you really want to give something back, email **<kyomunehiro@gmail.com>** (sp
 
 ## License & disclaimer
 
-
-- **Closed source.** This repository publishes compiled builds and documentation only; **no source code is provided.**
+- **Closed source.** This repository publishes compiled builds and documentation only; **no source code is provided.**    
   Copyright © Delete, All Rights Reserved.
-- **Sole distribution channel.** Apart from this repository's Releases, the author has authorised no third party
-  (including marketplaces such as Xianyu or Taobao) to distribute this software. If you **paid** for it somewhere else,
+- **Sole distribution channel.** Apart from this repository's Releases, the author has authorised no third party    
+  (including marketplaces such as Xianyu or Taobao) to distribute this software. If you **paid** for it somewhere else,    
   request a refund immediately — someone is reselling free software.
-- **No redistribution of modified builds.** Any build that is repackaged, or whose in-app text or donation details
+- **No redistribution of modified builds.** Any build that is repackaged, or whose in-app text or donation details    
   have been altered, is not published by the author — the author is not responsible for its content or safety.
-- **Not affiliated with Blizzard.** *World of Warcraft* is a trademark of Blizzard Entertainment.
+- **Not affiliated with Blizzard.** *World of Warcraft* is a trademark of Blizzard Entertainment.    
   This is an unofficial third-party tool with no affiliation or partnership with Blizzard Entertainment.
-- **Use at your own risk.** Addons come from sources you configure yourself; the author is not responsible for
+- **Use at your own risk.** Addons come from sources you configure yourself; the author is not responsible for    
   third-party addon content or stability. Any damage or data loss caused by modifying this program is your own responsibility.
 
 The full terms (what you may / may not do, plus the warranty disclaimer) are in **[LICENSE.md](LICENSE.md)**.
